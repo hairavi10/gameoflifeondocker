@@ -1,0 +1,22 @@
+pipeline { 
+    agent{ label "MASTER" }
+    stages{
+        stage ('Code Download From SCM'){
+            steps{
+                git 'https://github.com/hairavi10/gameoflifeondocker.git'
+                stash name: 'Dockerfile', includes: 'Dockerfile'
+            }
+        }
+        stage('GOF Docker Image'){
+            agent{ label "DOCKER" }
+            steps{
+                dir('/home/docker'){
+                      unstash name: 'Dockerfile' 
+                      sh 'docker image build -t hairavi10/gameoflife:05.20 .'                                                                    
+                }                             
+                                
+            }
+        }
+        
+    }
+}
