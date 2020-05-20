@@ -12,11 +12,11 @@ pipeline {
             steps{
                 dir('/home/devops'){
                       unstash name: 'Dockerfile' 
-                      sh 'docker image build -t hairavi10/gameoflife:05.20 .'                                                                    
+                      sh 'docker image build -t hairavi10/gameoflife:05.20 /home/devops/'                                                                    
                 }                             
                                 
             }
         }
         
     }
-}
+}  
