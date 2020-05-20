@@ -4,7 +4,7 @@ pipeline {
         stage ('Code Download From SCM'){
             steps{
                 git 'https://github.com/hairavi10/gameoflifeondocker.git'
-                stash name: 'Dockerfile', includes: 'gofondocker/Dockerfile'
+                stash name: 'Dockerfile', includes: 'Dockerfile'
             }
         }
         stage('GOF Docker Image'){
@@ -20,5 +20,3 @@ pipeline {
         
     }
 }
-
-   
