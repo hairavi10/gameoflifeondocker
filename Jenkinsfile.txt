@@ -14,7 +14,7 @@ pipeline {
                       unstash name: 'Dockerfile'                                                                                           
                 }   
                 sh '''
-                   docker image build -t hairavi10/gameoflife:05.20 /home/devops' 
+                   docker image build -t hairavi10/gameoflife:05.20 /home/devops
                    docker run -d -p 8080:8080 hairavi10/gameoflife:05.20
                    '''
             }
