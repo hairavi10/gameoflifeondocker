@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('GOF Docker Run'){
-            agent{ label "DOCKER" }
+            agent{ label "MASTER" }
             steps{
                 dir('/home/devops'){
                       unstash name: 'Dockerfile'                                                                                           
