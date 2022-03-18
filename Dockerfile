@@ -1,7 +1,7 @@
 FROM maven:3-jdk-8 as builder
-RUN git clone https://github.com/wakaleo/game-of-life.git
-RUN cd /game-of-life
-WORKDIR /game-of-life
+RUN git clone https://github.com/hairavi10/gameoflifeondocker.git
+RUN cd /gameoflifeondocker/game-of-life
+WORKDIR /gameoflifeondocker/game-of-life
 RUN mvn package
 
 
