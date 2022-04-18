@@ -10,3 +10,5 @@ LABEL owner=none
 EXPOSE 8080
 COPY --from=builder /gameoflifeondocker/game-of-life/gameoflife-web/target/gameoflife.war /usr/local/tomcat/webapps/gameoflife.war
 CMD ["catalina.sh", "run"]
+
+#### test on 18/4/2022
