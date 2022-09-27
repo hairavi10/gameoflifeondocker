@@ -1,5 +1,5 @@
 pipeline { 
-    agent{ label "docker-slave" }
+    agent{ label "docker-node" }
     stages{
         stage ('Code Download From SCM'){
             steps{
