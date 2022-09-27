@@ -15,8 +15,8 @@ pipeline {
                 }   
                 sh '''
                    ls /home/jenkins
-                   docker image build -t hairavi10/gameoflife:05.20 /home/jenkins
-                   docker run -d -p 8081:8080 hairavi10/gameoflife:05.20
+                   sudo docker image build -t hairavi10/gameoflife:05.20 /home/jenkins
+                   sudo docker run -d -p 8081:8080 hairavi10/gameoflife:05.20
                    '''
             }
         }
